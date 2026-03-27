@@ -8,4 +8,7 @@ const instance = axios.create({
   withCredentials: true, // Include credentials with requests
 });
 
-export { instance, baseURL }; // Export both the instance and base URL
+export {
+  instance,
+  baseURL
+}; // Export both the instance and base URL

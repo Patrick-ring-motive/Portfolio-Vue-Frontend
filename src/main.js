@@ -1,4 +1,6 @@
-import { createApp } from 'vue';
+import {
+  createApp
+} from 'vue';
 import App from './App.vue';
 import store from './store'; // Ensure the correct path
 import router from './router'; // Assuming you have a router

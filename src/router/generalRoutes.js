@@ -5,8 +5,7 @@ import Type from '@/views/Type.vue';
 import Lists from '@/views/Lists.vue';
 import Settings from '@/views/Settings.vue';
 
-export default [
-  {
+export default [{
     path: '/about-me',
     name: 'AboutMe',
     component: AboutMe

@@ -1,5 +1,8 @@
 // src/router/index.js
-import { createRouter, createWebHistory } from 'vue-router';
+import {
+  createRouter,
+  createWebHistory
+} from 'vue-router';
 import store from '@/store'; // Vuex store for authentication state
 
 // Import route groups
@@ -35,7 +38,9 @@ router.beforeEach(function beforeEach(to, from, next) {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     // Route requires auth and user is not authenticated
     if (!isAuthenticated) {
-      next({ name: 'Login' }); // Redirect to login page
+      next({
+        name: 'Login'
+      }); // Redirect to login page
     } else {
       next(); // Proceed to route
     }

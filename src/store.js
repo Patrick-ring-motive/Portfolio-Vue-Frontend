@@ -1,5 +1,9 @@
-import { createStore } from 'vuex';
-import { instance as axios } from './axios';
+import {
+  createStore
+} from 'vuex';
+import {
+  instance as axios
+} from './axios';
 import Cookies from 'js-cookie'; // Import js-cookie for cookie management
 
 const store = createStore({
@@ -25,7 +29,9 @@ const store = createStore({
     },
   },
   actions: {
-    async checkAuth({ commit }) {
+    async checkAuth({
+      commit
+    }) {
       try {
         const response = await axios.get('/auth/check-auth');
         commit('SET_USER', response.data.user);
@@ -36,16 +42,18 @@ const store = createStore({
           commit('SET_SESSION_ID', sessionId);
         }
       } catch (error) {
-        console.warn('Not authenticated:', error,...arguments);
+        console.warn('Not authenticated:', error, ...arguments);
         commit('LOGOUT');
       }
     },
-    async logout({ commit }) {
+    async logout({
+      commit
+    }) {
       try {
         await axios.post('/auth/logout');
         commit('LOGOUT');
       } catch (error) {
-        console.warn('Logout error:', error,...arguments);
+        console.warn('Logout error:', error, ...arguments);
       }
     },
   },

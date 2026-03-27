@@ -1,13 +1,16 @@
 // src/api.js
-import { instance as axios } from './axios'; // Import your configured Axios axios
+import {
+  instance as axios
+} from './axios'; // Import your configured Axios axios
 import store from './store'; // Import the Vuex store to access sessionId and other state
 
 // API call to create a new list
 export async function createList(listData) {
-  const { sessionId } = store.state;
+  const {
+    sessionId
+  } = store.state;
 
   console.log(axios);
-
 
   if (!sessionId) {
     throw new Error('No session ID found. User may not be authenticated.');
@@ -16,12 +19,15 @@ export async function createList(listData) {
   try {
     const response = await axios.post(
       '/lists/',
-      listData,
-      { headers: { 'Authorization': `Bearer ${sessionId}` } }
+      listData, {
+        headers: {
+          'Authorization': `Bearer ${sessionId}`
+        }
+      }
     );
     return response.data;
   } catch (error) {
-    console.warn('Error creating list:', error,...arguments);
+    console.warn('Error creating list:', error, ...arguments);
     throw error;
   }
 }
@@ -30,7 +36,9 @@ export async function createList(listData) {
 // Add more functions as needed
 
 export async function deleteList(listId) {
-  const { sessionId } = store.state;
+  const {
+    sessionId
+  } = store.state;
 
   if (!sessionId) {
     throw new Error('No session ID found. User may not be authenticated.');
@@ -38,11 +46,13 @@ export async function deleteList(listId) {
 
   try {
     const response = await axios.delete(`/api/lists/${listId}`, {
-      headers: { 'Authorization': `Bearer ${sessionId}` },
+      headers: {
+        'Authorization': `Bearer ${sessionId}`
+      },
     });
     return response.data;
   } catch (error) {
-    console.warn('Error deleting list:', error,...arguments);
+    console.warn('Error deleting list:', error, ...arguments);
     throw error;
   }
 }
