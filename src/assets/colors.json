@@ -1,10 +1,10 @@
 {
-    "primary": "#3498db",
-    "secondary": "#2ecc71",
-    "downClick": "#e74c3c",
-    "clicked": "e",
-    "hover": "#383444",
-    "text": "white",
-    "background": "#343541",
-    "sideBar": "black "
-  }
+  "primary": "#3498db",
+  "secondary": "#2ecc71",
+  "downClick": "#e74c3c",
+  "clicked": "e",
+  "hover": "#383444",
+  "text": "white",
+  "background": "#343541",
+  "sideBar": "black "
+}
