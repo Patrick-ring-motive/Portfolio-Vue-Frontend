@@ -1,5 +1,6 @@
 /* Ensure body and html fill the entire viewport */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -12,7 +13,8 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 10vh; /* Fixed height of 10% of the viewport */
+  height: 10vh;
+  /* Fixed height of 10% of the viewport */
   padding: 0 20px;
 }
 
@@ -43,7 +45,8 @@ html, body {
 /* Page container styling */
 .page-container {
   display: flex;
-  height: calc(100vh - 10vh); /* Take the full viewport height minus the top row height */
+  height: calc(100vh - 10vh);
+  /* Take the full viewport height minus the top row height */
   overflow: hidden;
 }
 
@@ -56,11 +59,12 @@ html, body {
   background-color: #f4f4f4;
   border-right: 1px solid #ccc;
   box-sizing: border-box;
-  height: 100%; /* Ensure it stretches to fill the remaining height */
+  height: 100%;
+  /* Ensure it stretches to fill the remaining height */
 }
 
 /* Each ListElement should take 1/4 of the page width */
-.lists-container > * {
+.lists-container>* {
   flex: 1;
 }
 
