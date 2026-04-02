@@ -18,13 +18,14 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color:#383444;
+  background-color: #383444;
   width: 100%;
-  box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.2); /* Shadow adjusted upwards */
+  box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* Shadow adjusted upwards */
   z-index: 1;
-  bottom: 100%; 
-  max-height: 400px; 
-  overflow-y: auto; 
+  bottom: 100%;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .dropdown-content a {
@@ -74,10 +75,10 @@
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  height:90vh;
+  height: 90vh;
   width: 400px;
-  overflow:hidden;
-  color:white;
+  overflow: hidden;
+  color: white;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -100,8 +101,8 @@
   min-height: 60%;
   max-height: 64%;
   max-width: 100%;
-  overflow-y:auto;
-  flex:1;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .ListItem {
@@ -126,7 +127,7 @@
 }
 
 .ListItem {
-  padding-left:20px;
+  padding-left: 20px;
 }
 
 .ListItem,
@@ -147,28 +148,35 @@ li:hover {
 
 .input-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
-  gap: 10px; /* Space between items */
-  align-items: center; /* Vertically center items */
-  justify-items: center; /* Horizontally center items */
-  user-select: none; 
+  grid-template-columns: repeat(3, 1fr);
+  /* Change to 3 columns */
+  gap: 10px;
+  /* Space between items */
+  align-items: center;
+  /* Vertically center items */
+  justify-items: center;
+  /* Horizontally center items */
+  user-select: none;
 }
 
 .boolean-slider {
-  display: contents; /* Allows children to participate in the grid layout */
+  display: contents;
+  /* Allows children to participate in the grid layout */
 }
 
 .settings {
-  max-width: 100%; /* Make settings fully responsive */
-  max-height: 20px; /* Adjust as necessary */
-}
-
-.title{
   max-width: 100%;
-  font-size:25px;
+  /* Make settings fully responsive */
+  max-height: 20px;
+  /* Adjust as necessary */
 }
 
-.input-grid > * {
-  min-width: 0; /* Prevent overflow */
+.title {
+  max-width: 100%;
+  font-size: 25px;
 }
 
+.input-grid>* {
+  min-width: 0;
+  /* Prevent overflow */
+}
